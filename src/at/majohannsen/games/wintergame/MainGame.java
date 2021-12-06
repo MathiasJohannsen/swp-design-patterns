@@ -1,11 +1,14 @@
 package at.majohannsen.games.wintergame;
 
 import org.newdawn.slick.*;
+import org.newdawn.slick.openal.MODSound;
 
+import java.lang.module.ModuleFinder;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainGame extends BasicGame {
-    List<Actor> actors;
+    List<Actor> actors = new ArrayList<>();
 
     public MainGame(String title) {
         super(title);
@@ -13,10 +16,14 @@ public class MainGame extends BasicGame {
 
     @Override
     public void init(GameContainer gameContainer) throws SlickException {
-        MoveRight mr = new MoveRight(200, 100, 50);
+        MoveStrategy mr = new MoveRight(200, 100, 0.5f);
+        MoveStrategy ml = new MoveLeft(500,500,0.5f);
+        MoveStrategy mu = new MoveUp(100,500,0.5f);
+        MoveStrategy md = new MoveDown(500,100,0.5f);
         actors.add(new CircleActor(mr, 50));
-        actors.add(new RectActor(200,100, 50, 200));
-        actors.add(new OvalActor(200,100, 20, 100));
+        actors.add(new RectActor(md, 200,40));
+        actors.add(new OvalActor(mu, 20, 100));
+        actors.add(new RectActor(ml, 20,30));
     }
 
     @Override

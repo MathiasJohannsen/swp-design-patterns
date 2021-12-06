@@ -6,18 +6,18 @@ import java.util.Random;
 
 public class CircleActor implements Actor {
     private float size;
-    private MoveRight mr;
+    private MoveStrategy mv;
 
-    public CircleActor(MoveRight mr, float size) {
-        this.mr = mr;
+    public CircleActor(MoveStrategy mv, float size) {
+        this.mv = mv;
         this.size = size;
     }
 
     public void update(GameContainer gameContainer, int deltaTime) {
-        mr.update(gameContainer, deltaTime);
+        mv.update(deltaTime);
     }
 
     public void render(GameContainer gameContainer, Graphics graphics) {
-        graphics.drawOval(mr.getX(),mr.getY(),size,size);
+        graphics.drawOval(mv.getX(),mv.getY(),size,size);
     }
 }

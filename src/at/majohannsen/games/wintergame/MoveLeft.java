@@ -1,18 +1,16 @@
 package at.majohannsen.games.wintergame;
 
-import org.newdawn.slick.GameContainer;
-
-public class MoveRight implements MoveStrategy {
+public class MoveLeft implements MoveStrategy {
     private float x,y,speed;
 
-    public MoveRight(float x, float y, float speed) {
+    public MoveLeft(float x, float y, float speed) {
         this.x = x;
         this.y = y;
         this.speed = speed;
     }
 
     public void update(int deltaTime) {
-        this.x += deltaTime * speed;
+        this.x -= deltaTime * speed;
     }
 
     public float getX() {

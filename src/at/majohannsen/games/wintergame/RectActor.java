@@ -4,23 +4,22 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 
 public class RectActor implements Actor{
-    private float x,y,w,h;
+    private float w,h;
+    MoveStrategy mv;
 
-    public RectActor(float x, float y, float width, float height) {
-        this.x = x;
-        this.y = y;
+    public RectActor(MoveStrategy mv, float width, float height) {
+        this.mv = mv;
         this.w = width;
         this.h = height;
     }
 
     @Override
     public void update(GameContainer gameContainer, int deltaTime) {
-        x += 0.3;
-        y += 0.6;
+        mv.update(deltaTime);
     }
 
     @Override
     public void render(GameContainer gameContainer, Graphics graphics) {
-        graphics.drawRect(x,y,w,h);
+        graphics.drawRect(mv.getX(),mv.getY(),w,h);
     }
 }
