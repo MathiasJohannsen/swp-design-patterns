@@ -16,10 +16,10 @@ public class MainGame extends BasicGame {
 
     @Override
     public void init(GameContainer gameContainer) throws SlickException {
-        MoveStrategy mr = new MoveRight(200, 100, 0.5f);
-        MoveStrategy ml = new MoveLeft(500,500,0.5f);
-        MoveStrategy mu = new MoveUp(100,500,0.5f);
-        MoveStrategy md = new MoveDown(500,100,0.5f);
+        MoveStrategy mr = new MoveDiagonal(200, 100, 0.5f, 0);
+        MoveStrategy ml = new MoveDiagonal(500,500,0.5f, 0);
+        MoveStrategy mu = new MoveDiagonal(100,500,0,0.5f);
+        MoveStrategy md = new MoveDiagonal(500,100,0,0.5f);
         actors.add(new CircleActor(mr, 50));
         actors.add(new RectActor(md, 200,40));
         actors.add(new OvalActor(mu, 20, 100));

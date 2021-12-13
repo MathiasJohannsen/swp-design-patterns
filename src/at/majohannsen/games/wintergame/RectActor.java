@@ -5,7 +5,6 @@ import org.newdawn.slick.Graphics;
 
 public class RectActor extends AbstractActor {
     private float w,h;
-    MoveStrategy mv;
 
     public RectActor(MoveStrategy mv, float width, float height) {
         super(mv);

@@ -5,7 +5,6 @@ import org.newdawn.slick.Graphics;
 
 public class OvalActor extends AbstractActor {
     private float w,h;
-    MoveStrategy mv;
 
     public OvalActor(MoveStrategy mv, float width, float height) {
         super(mv);
