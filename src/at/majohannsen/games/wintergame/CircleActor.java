@@ -4,17 +4,12 @@ import org.newdawn.slick.*;
 
 import java.util.Random;
 
-public class CircleActor implements Actor {
+public class CircleActor extends AbstractActor {
     private float size;
-    private MoveStrategy mv;
 
     public CircleActor(MoveStrategy mv, float size) {
-        this.mv = mv;
+        super(mv);
         this.size = size;
-    }
-
-    public void update(GameContainer gameContainer, int deltaTime) {
-        mv.update(deltaTime);
     }
 
     public void render(GameContainer gameContainer, Graphics graphics) {

@@ -3,19 +3,14 @@ package at.majohannsen.games.wintergame;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 
-public class RectActor implements Actor{
+public class RectActor extends AbstractActor {
     private float w,h;
     MoveStrategy mv;
 
     public RectActor(MoveStrategy mv, float width, float height) {
-        this.mv = mv;
+        super(mv);
         this.w = width;
         this.h = height;
-    }
-
-    @Override
-    public void update(GameContainer gameContainer, int deltaTime) {
-        mv.update(deltaTime);
     }
 
     @Override
