@@ -1,9 +1,13 @@
 package at.majohannsen.games.wintergame;
 
+import at.majohannsen.games.wintergame.actors.Actor;
+import at.majohannsen.games.wintergame.actors.CircleActor;
+import at.majohannsen.games.wintergame.actors.OvalActor;
+import at.majohannsen.games.wintergame.actors.RectActor;
+import at.majohannsen.games.wintergame.movements.MoveDiagonal;
+import at.majohannsen.games.wintergame.movements.MoveStrategy;
 import org.newdawn.slick.*;
-import org.newdawn.slick.openal.MODSound;
 
-import java.lang.module.ModuleFinder;
 import java.util.ArrayList;
 import java.util.List;
 

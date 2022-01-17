@@ -1,5 +1,6 @@
-package at.majohannsen.games.wintergame;
+package at.majohannsen.games.wintergame.actors;
 
+import at.majohannsen.games.wintergame.movements.MoveStrategy;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 

@@ -1,4 +1,4 @@
-package at.majohannsen.games.wintergame;
+package at.majohannsen.games.wintergame.movements;
 
 public interface MoveStrategy {
     float getX();

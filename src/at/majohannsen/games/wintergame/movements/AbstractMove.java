@@ -1,4 +1,4 @@
-package at.majohannsen.games.wintergame;
+package at.majohannsen.games.wintergame.movements;
 
 public abstract class AbstractMove implements MoveStrategy {
     protected float x,y;

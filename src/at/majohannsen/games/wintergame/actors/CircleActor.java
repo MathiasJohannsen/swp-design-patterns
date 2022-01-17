@@ -1,8 +1,7 @@
-package at.majohannsen.games.wintergame;
+package at.majohannsen.games.wintergame.actors;
 
+import at.majohannsen.games.wintergame.movements.MoveStrategy;
 import org.newdawn.slick.*;
-
-import java.util.Random;
 
 public class CircleActor extends AbstractActor {
     private float size;
