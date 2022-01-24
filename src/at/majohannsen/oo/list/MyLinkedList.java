@@ -1,8 +1,8 @@
 package at.majohannsen.oo.list;
 
 public class MyLinkedList implements MyList {
-    private Node root = null;
-    private int size = 0;
+    protected Node root = null;
+    protected int size = 0;
 
     @Override
     public void add(int value) {
