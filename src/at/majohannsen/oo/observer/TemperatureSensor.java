@@ -1,4 +1,4 @@
-package at.majohannsen.games.observer;
+package at.majohannsen.oo.observer;
 
 import java.util.ArrayList;
 import java.util.List;
