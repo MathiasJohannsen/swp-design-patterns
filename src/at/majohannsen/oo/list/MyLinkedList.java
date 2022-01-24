@@ -24,11 +24,16 @@ public class MyLinkedList implements MyList {
         if (index >= size) {
             throw new IndexOutOfBoundsException();
         }
-        Node p = root;
-        for (int i = 0; i < index-1; i++) {
-            p = p.getNext();
+        if (index == 0) {
+            root = root.getNext();
         }
-        p.setNext(p.getNext().getNext());
+        else {
+            Node p = root;
+            for (int i = 0; i < index-1; i++) {
+                p = p.getNext();
+            }
+            p.setNext(p.getNext().getNext());
+        }
         size--;
     }
 
