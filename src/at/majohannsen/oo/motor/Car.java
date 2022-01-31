@@ -5,12 +5,11 @@ import java.util.List;
 
 public class Car {
 
-    private MotorControllerSingleton mc;
+    private MotorController mc;
     private List<SpeedObserver> observers = new ArrayList<>();
 
     public Car(DriveStrategy strategy) {
-        MotorControllerSingleton.setStrategy(strategy);
-        mc = MotorControllerSingleton.getInstance();
+        mc = new MotorController(strategy);
         observers.add(mc);
     }
 
