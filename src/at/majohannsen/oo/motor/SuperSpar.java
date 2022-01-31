@@ -1,9 +1,9 @@
 package at.majohannsen.oo.motor;
 
-public class SuperSpar implements MotorControler {
+public class SuperSpar implements DriveStrategy {
 
     @Override
-    public int drive() {
+    public int driveMode() {
         return 3;
     }
 }

@@ -1,8 +1,7 @@
 package at.majohannsen.oo.motor;
 
-public class TopSpeed implements MotorControler {
-    @Override
-    public int drive() {
+public class TopSpeed implements DriveStrategy {
+    public int driveMode() {
         return 2;
     }
 }
