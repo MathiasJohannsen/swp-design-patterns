@@ -1,14 +1,14 @@
 package at.majohannsen.oo.list;
 
-public class Node {
-    private int value;
+public class Node<E extends Comparable<E>> {
+    private E value;
     private Node next;
 
-    public Node(int value) {
+    public Node(E value) {
         this.value = value;
     }
 
-    public int getValue() {
+    public E getValue() {
         return value;
     }
 

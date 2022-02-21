@@ -1,11 +1,11 @@
 package at.majohannsen.oo.list;
 
-public class MyLinkedList implements MyList {
-    protected Node root = null;
+public class MyLinkedList<E extends Comparable<E>> implements MyList<E> {
+    protected Node<E> root = null;
     protected int size = 0;
 
     @Override
-    public void add(int value) {
+    public void add(E value) {
         if (root == null) {
             root = new Node(value);
         }
@@ -38,15 +38,27 @@ public class MyLinkedList implements MyList {
     }
 
     @Override
-    public int get(int index) {
+    public E get(int index) {
         if (index >= size) {
             throw new IndexOutOfBoundsException();
         }
-        Node p = root;
+        Node<E> p = root;
         for (int i = 0; i < index; i++) {
             p = p.getNext();
         }
         return p.getValue();
+    }
+
+    @Override
+    public boolean contains(E value) {
+        Node<E> p = root;
+        while (p != null) {
+            if (p.getValue() == value) {
+                return true;
+            }
+            p = p.getNext();
+        }
+        return false;
     }
 
     public int size() {

@@ -1,22 +1,22 @@
 package at.majohannsen.oo.list;
 
-public class MySortedLinkedList extends MyLinkedList {
+public class MySortedLinkedList<E extends Comparable<E>> extends MyLinkedList<E> {
     @Override
-    public void add(int value) {
+    public void add(E value) {
         if (root == null) {
-            root = new Node(value);
+            root = new Node<E>(value);
         }
         else {
-            Node p = root;
-            if (p.getValue() >= value) {
-                root = new Node(value);
+            Node<E> p = root;
+            if (p.getValue().compareTo(value) >= 0) {
+                root = new Node<E>(value);
                 root.setNext(p);
                 size++;
                 return;
             }
             while (p.getNext() != null) {
-                if (p.getNext().getValue() >= value) {
-                    Node n = new Node(value);
+                if (p.getNext().getValue().compareTo(value) >= 0) {
+                    Node<E> n = new Node<E>(value);
                     n.setNext(p.getNext());
                     p.setNext(n);
                     size++;

@@ -1,7 +1,8 @@
 package at.majohannsen.oo.list;
 
-public interface MyList {
-    public void add(int value);
+public interface MyList<E extends Comparable<E>>{
+    public void add(E value);
     public void remove(int index);
-    public int get(int index);
+    public E get(int index);
+    public boolean contains(E value);
 }
